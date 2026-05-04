@@ -40,7 +40,7 @@ export const createPodSchedulingPolicy = async (
       engineType: dbType,
     },
   });
-  return response;
+  return response.data;
 };
 
 export const updatePodSchedulingPolicy = async (
@@ -58,5 +58,5 @@ export const updatePodSchedulingPolicy = async (
 
 export const deletePodSchedulingPolicy = async (name: string) => {
   const response = await api.delete(`pod-scheduling-policies/${name}`);
-  return response;
+  return response.data;
 };
